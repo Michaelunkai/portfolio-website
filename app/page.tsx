@@ -7,24 +7,27 @@ import TemplatesSection from "@/components/home/TemplatesSection";
 import AboutSection from "@/components/home/AboutSection";
 import TeamSection from "@/components/home/TeamSection";
 import Footer from "@/components/layout/Footer";
+import PageTransition from "@/components/PageTransition";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
-        <section id="home">
-          <HeroSection />
-        </section>
-        <FocusSection />
-        <FeaturedProject />
-        <section id="projects">
-          <ProjectsSection />
-        </section>
-        <TemplatesSection />
-        <AboutSection />
-        <TeamSection />
-      </main>
+      <PageTransition>
+        <main>
+          <section id="home">
+            <HeroSection />
+          </section>
+          <FocusSection />
+          <FeaturedProject />
+          <section id="projects">
+            <ProjectsSection />
+          </section>
+          <TemplatesSection />
+          <AboutSection />
+          <TeamSection />
+        </main>
+      </PageTransition>
       <Footer />
     </>
   );

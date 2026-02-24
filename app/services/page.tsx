@@ -4,17 +4,20 @@ import ProcessSection from "@/components/services/ProcessSection";
 import PricingSection from "@/components/services/PricingSection";
 import ContactForm from "@/components/services/ContactForm";
 import Footer from "@/components/layout/Footer";
+import PageTransition from "@/components/PageTransition";
 
 export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <main>
-        <ServicesHero />
-        <ProcessSection />
-        <PricingSection />
-        <ContactForm />
-      </main>
+      <PageTransition>
+        <main id="services">
+          <ServicesHero />
+          <ProcessSection />
+          <PricingSection />
+          <ContactForm />
+        </main>
+      </PageTransition>
       <Footer />
     </>
   );
