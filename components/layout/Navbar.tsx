@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "@/components/ThemeProvider";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -18,8 +17,24 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
   const pathname = usePathname();
-  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    // Load theme from localStorage
+    const stored = localStorage.getItem("theme") as "dark" | "light" | null;
+    if (stored) {
+      setTheme(stored);
+      document.documentElement.classList.toggle("light", stored === "light");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    document.documentElement.classList.toggle("light", newTheme === "light");
+    localStorage.setItem("theme", newTheme);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
