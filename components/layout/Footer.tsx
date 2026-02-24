@@ -3,12 +3,18 @@
 import Link from "next/link";
 import { Github, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import ContactForm from "@/components/services/ContactForm";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0a0b14] border-t border-white/[0.05] py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#0a0b14] border-t border-white/[0.05]">
+      {/* Contact Form Section */}
+      <ContactForm />
+      
+      {/* Footer Info */}
+      <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Column */}
@@ -128,6 +134,7 @@ export default function Footer() {
             Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by Michael Fedorovsky
           </p>
         </div>
+      </div>
       </div>
     </footer>
   );

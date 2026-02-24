@@ -205,6 +205,22 @@ export default function ContactForm() {
                 <option value="cicd">CI/CD Pipeline Setup</option>
                 <option value="monitoring">Monitoring & Alerting</option>
                 <option value="infrastructure">Infrastructure Automation</option>
+                <option value="automation-scripts">Custom Automation Scripts</option>
+                <option value="docker">Docker Containerization</option>
+                <option value="github-actions">GitHub Actions Workflows</option>
+                <option value="linux-server">Linux Server Setup & Hardening</option>
+                <option value="database">Database Performance Tuning</option>
+                <option value="api-development">RESTful API Development</option>
+                <option value="kubernetes">Kubernetes Migration & Setup</option>
+                <option value="security-audit">Security Audit & Penetration Testing</option>
+                <option value="microservices">Microservices Architecture Design</option>
+                <option value="backup-recovery">Backup & Disaster Recovery</option>
+                <option value="log-aggregation">Centralized Logging (ELK/Loki)</option>
+                <option value="terraform">Infrastructure as Code (Terraform)</option>
+                <option value="chatbot">AI Chatbot Development</option>
+                <option value="cost-optimization">Cloud Cost Optimization</option>
+                <option value="web-scraping">Web Scraping & Automation</option>
+                <option value="full-stack">Full-Stack Development</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -223,10 +239,16 @@ export default function ContactForm() {
                 className="w-full px-4 py-3 bg-[#0a0b14] border border-white/10 rounded-lg text-white focus:outline-none focus:border-cyan-500 transition-colors"
               >
                 <option value="">Select budget range</option>
-                <option value="under-500">Under $500</option>
+                <option value="under-200">Under $200</option>
+                <option value="200-500">$200 - $500</option>
                 <option value="500-1000">$500 - $1,000</option>
-                <option value="1000-2500">$1,000 - $2,500</option>
-                <option value="2500-plus">$2,500+</option>
+                <option value="1000-2000">$1,000 - $2,000</option>
+                <option value="2000-3000">$2,000 - $3,000</option>
+                <option value="3000-5000">$3,000 - $5,000</option>
+                <option value="5000-10000">$5,000 - $10,000</option>
+                <option value="10000-plus">$10,000+</option>
+                <option value="hourly">Hourly Rate ($50-$150/hr)</option>
+                <option value="flexible">Flexible / Negotiable</option>
               </select>
             </div>
 
