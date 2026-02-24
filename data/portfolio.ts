@@ -330,6 +330,74 @@ At TovTech, I designed cloud infrastructure with Cloudflare CDN integration, aut
       ],
       popular: false,
     },
+    {
+      id: "automation-scripts",
+      name: "Custom Automation Scripts",
+      description:
+        "Build powerful automation scripts in Python, Bash, or PowerShell to streamline your workflows. From system administration to data processing, I'll create reliable scripts that save you hours daily.",
+      icon: "Code2",
+      accentColor: "cyan",
+      price: "$120",
+      features: [
+        "Python/Bash/PowerShell Scripts",
+        "System Administration Automation",
+        "Data Processing & ETL Pipelines",
+        "API Integration & Web Scraping",
+        "Complete Documentation & Testing",
+      ],
+      popular: false,
+    },
+    {
+      id: "docker-migration",
+      name: "Docker Containerization",
+      description:
+        "Migrate your applications to Docker containers for consistent, portable deployments. Includes multi-stage builds, docker-compose orchestration, volume management, and container optimization.",
+      icon: "Package",
+      accentColor: "indigo",
+      price: "$380",
+      features: [
+        "Multi-Stage Dockerfile Optimization",
+        "Docker Compose Setup",
+        "Volume & Network Configuration",
+        "Container Security Hardening",
+        "Local Development Environment",
+      ],
+      popular: false,
+    },
+    {
+      id: "github-actions-workflow",
+      name: "GitHub Actions Workflows",
+      description:
+        "Automate your entire development workflow with custom GitHub Actions. Testing, building, deploying, and notifications - all triggered automatically on git events.",
+      icon: "GitBranch",
+      accentColor: "yellow",
+      price: "$280",
+      features: [
+        "Custom GitHub Actions Workflows",
+        "Automated Testing & Linting",
+        "Docker Build & Push to Registry",
+        "Environment-Specific Deployments",
+        "Slack/Discord Notifications",
+      ],
+      popular: false,
+    },
+    {
+      id: "linux-server-setup",
+      name: "Linux Server Setup & Hardening",
+      description:
+        "Complete Linux server configuration with security hardening, firewall setup, SSL certificates, automated backups, and monitoring. Perfect for production deployments.",
+      icon: "Shield",
+      accentColor: "red",
+      price: "$420",
+      features: [
+        "Ubuntu/Debian/CentOS Setup",
+        "Security Hardening & Firewall (ufw/iptables)",
+        "SSL/TLS Certificate Automation (Let's Encrypt)",
+        "Automated Backup Scripts",
+        "Basic Monitoring & Log Rotation",
+      ],
+      popular: false,
+    },
   ],
   process: [
     {

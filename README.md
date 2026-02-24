@@ -2,6 +2,8 @@
 
 A modern, fully-featured portfolio website built with Next.js 16, TypeScript, Tailwind CSS, Framer Motion, and Shadcn/UI.
 
+**🌐 Live Site:** https://portfolio-website-psi-jade-83.vercel.app/
+
 ![Portfolio Preview](https://via.placeholder.com/1200x600?text=Portfolio+Website)
 
 ## ✨ Features
