@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     "Israel DevOps",
   ],
   authors: [{ name: "Michael Fedorovsky" }],
+  metadataBase: new URL("https://michaelunkai.github.io/portfolio-website"),
   openGraph: {
     title: "Michael Fedorovsky | DevOps Engineer",
     description:
