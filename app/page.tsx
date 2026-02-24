@@ -5,7 +5,6 @@ import FeaturedProject from "@/components/home/FeaturedProject";
 import ProjectsSection from "@/components/home/ProjectsSection";
 import AboutSection from "@/components/home/AboutSection";
 import TeamSection from "@/components/home/TeamSection";
-import ContactForm from "@/components/services/ContactForm";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
         </section>
         <AboutSection />
         <TeamSection />
-        <ContactForm />
       </main>
       <Footer />
     </>
