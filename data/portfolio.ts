@@ -236,6 +236,81 @@ I thrive on solving complex infrastructure challenges, optimizing costs, and bui
       },
       featured: false,
     },
+    {
+      id: "project-13",
+      name: "TovPlay Frontend",
+      tagline: "React Gaming Platform UI with Real-Time Updates",
+      description:
+        "Modern React frontend for TovPlay gaming platform. Features responsive design, real-time Socket.IO updates, Discord OAuth, JWT authentication, and seamless game library browsing. Built with Vite, Tailwind CSS, and production-ready state management.",
+      image: "/images/projects/tovplay-frontend.svg",
+      tech: ["React", "Vite", "Tailwind CSS", "Socket.IO", "JWT"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/tovplay-frontend",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-14",
+      name: "Job Task Tracker",
+      tagline: "Professional Task Management & Documentation System",
+      description:
+        "Full-stack job documentation and task management application built with modern web technologies. Features task prioritization, time tracking, project organization, team collaboration, and comprehensive reporting for professional workflows.",
+      image: "/images/projects/job-tracker.svg",
+      tech: ["Node.js", "Express", "PostgreSQL", "React", "Docker"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/job-task-tracker",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-15",
+      name: "Windows 11 System Monitor",
+      tagline: "Real-Time System Monitoring Dashboard with WebSockets",
+      description:
+        "Real-time Windows 11 system monitoring dashboard with WebSocket updates. Track CPU, RAM, disk, network usage, running processes, and system health metrics. Built with Node.js, WebSockets, and responsive charting for live visualization.",
+      image: "/images/projects/win11-monitor.svg",
+      tech: ["Node.js", "WebSockets", "Chart.js", "Windows API", "Express"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/win11-monitor",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-16",
+      name: "Claude Reddit Aggregator",
+      tagline: "Real-Time AI Discussion Tracker with Dark Mode",
+      description:
+        "Real-time Reddit aggregator for Claude and AI discussions with dark mode, live updates via Socket.IO, sentiment analysis, and keyword filtering. Fetches posts from multiple subreddits, provides trending topic analysis, and delivers a modern browsing experience.",
+      image: "/images/projects/reddit-aggregator.svg",
+      tech: ["Node.js", "Reddit API", "Socket.IO", "Express", "JavaScript"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/claude-reddit-aggregator",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-17",
+      name: "Claude Code News",
+      tagline: "Auto-Updating AI News Aggregator",
+      description:
+        "Auto-updating news aggregator for Claude Code and Anthropic AI with scheduled fetching, RSS integration, automated content updates, and clean presentation. Stays current with the latest AI developments and Claude ecosystem updates without manual intervention.",
+      image: "/images/projects/claude-news.svg",
+      tech: ["Node.js", "RSS Parser", "Cron", "Express", "Web Scraping"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/claude-code-news",
+        app: null,
+      },
+      featured: false,
+    },
   ],
   templates: [
     {
