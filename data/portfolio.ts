@@ -71,6 +71,21 @@ At TovTech, I designed cloud infrastructure with Cloudflare CDN integration, aut
     },
     {
       id: "project-2",
+      name: "Game Library Manager",
+      tagline: "Docker-Based Game Library with Web UI - 928 Games",
+      description:
+        "Dockerized game library management system with modern web interface. Browse, search, and manage 928 games with detailed metadata, cover art, and download links. Built with JavaScript, Docker, and responsive UI design for seamless navigation.",
+      image: "/images/projects/game-library.svg",
+      tech: ["Docker", "JavaScript", "Node.js", "Web UI"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/game-library-manager-web",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-3",
       name: "Container Security Scanner",
       tagline: "Automated CVE Detection & CVSS Scoring",
       description:
@@ -85,7 +100,7 @@ At TovTech, I designed cloud infrastructure with Cloudflare CDN integration, aut
       featured: false,
     },
     {
-      id: "project-3",
+      id: "project-4",
       name: "Prometheus Monitoring Stack",
       tagline: "Full Observability with Grafana & ELK",
       description:
@@ -100,7 +115,7 @@ At TovTech, I designed cloud infrastructure with Cloudflare CDN integration, aut
       featured: false,
     },
     {
-      id: "project-4",
+      id: "project-5",
       name: "ArgoCD GitOps Infrastructure",
       tagline: "Kubernetes CD with Automated Rollbacks",
       description:
@@ -115,7 +130,7 @@ At TovTech, I designed cloud infrastructure with Cloudflare CDN integration, aut
       featured: false,
     },
     {
-      id: "project-5",
+      id: "project-6",
       name: "API Gateway Platform",
       tagline: "High-Performance Request Router & Rate Limiter",
       description:
@@ -130,7 +145,7 @@ At TovTech, I designed cloud infrastructure with Cloudflare CDN integration, aut
       featured: false,
     },
     {
-      id: "project-6",
+      id: "project-7",
       name: "Log Analysis AI",
       tagline: "ML-Powered Anomaly Detection",
       description:
@@ -140,6 +155,81 @@ At TovTech, I designed cloud infrastructure with Cloudflare CDN integration, aut
       links: {
         website: null,
         source: "https://github.com/Michaelunkai/log-analysis-ai",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-8",
+      name: "StartupMaster",
+      tagline: "Windows Startup Manager & Optimization Tool",
+      description:
+        "Advanced C# desktop application for managing Windows startup programs with intelligent optimization suggestions. Features process monitoring, startup delay configuration, registry management, and performance impact analysis to speed up boot times.",
+      image: "/images/projects/startupmaster.svg",
+      tech: ["C#", ".NET", "WinForms", "Windows API"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/startupmaster",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-9",
+      name: "GitDesk",
+      tagline: "Desktop Git Client with Visual Interface",
+      description:
+        "Modern desktop Git client built in C# with WPF. Features branch visualization, commit history graph, merge conflict resolution UI, and integrated diff viewer. Simplifies Git workflows with intuitive visual representations.",
+      image: "/images/projects/gitdesk.svg",
+      tech: ["C#", "WPF", "Git", ".NET"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/gitdesk",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-10",
+      name: "gitit",
+      tagline: "Python CLI for Automated Git Workflows",
+      description:
+        "Command-line automation tool for common Git operations. Streamlines add-commit-push workflows, branch management, and repository maintenance with smart defaults and interactive prompts. Built for speed and efficiency in daily development.",
+      image: "/images/projects/gitit.svg",
+      tech: ["Python", "CLI", "Git", "Automation"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/gitit",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-11",
+      name: "OpenClaw AI Agent",
+      tagline: "TypeScript-Powered AI Automation Framework",
+      description:
+        "Advanced AI agent framework built with TypeScript and Claude API integration. Automates complex workflows, manages multi-session conversations, and provides intelligent task delegation. Features Telegram integration and extensible skill system.",
+      image: "/images/projects/openclaw.svg",
+      tech: ["TypeScript", "Claude AI", "Node.js", "Telegram API"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/openclaw",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-12",
+      name: "YouTube Recommendation Filter",
+      tagline: "Browser Extension for Content Control",
+      description:
+        "JavaScript browser extension that filters YouTube recommendations based on custom rules. Block unwanted content, hide specific channels, and create a cleaner viewing experience with regex pattern matching and whitelist/blacklist management.",
+      image: "/images/projects/youtube-filter.svg",
+      tech: ["JavaScript", "Browser Extension", "Chrome API"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/youtube_recommendation_filter",
         app: null,
       },
       featured: false,
