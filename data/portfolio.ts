@@ -34,26 +34,166 @@ I thrive on solving complex infrastructure challenges, optimizing costs, and bui
     { value: "50+", label: "GitHub Repositories" },
   ],
   techStack: [
+    // Cloud Platforms
     { name: "AWS", icon: "SiAmazonwebservices" },
+    { name: "Azure", icon: "SiMicrosoftazure" },
+    { name: "Google Cloud", icon: "SiGooglecloud" },
+    { name: "DigitalOcean", icon: "SiDigitalocean" },
+    { name: "Cloudflare", icon: "SiCloudflare" },
+    { name: "Vercel", icon: "SiVercel" },
+    { name: "Netlify", icon: "SiNetlify" },
+    
+    // Containers & Orchestration
     { name: "Docker", icon: "SiDocker" },
     { name: "Kubernetes", icon: "SiKubernetes" },
+    { name: "Helm", icon: "SiHelm" },
+    { name: "ArgoCD", icon: "SiArgo" },
+    { name: "Rancher", icon: "SiRancher" },
+    { name: "Podman", icon: "SiPodman" },
+    { name: "containerd", icon: "SiContainerd" },
+    
+    // IaC & Configuration Management
     { name: "Terraform", icon: "SiTerraform" },
     { name: "Ansible", icon: "SiAnsible" },
+    { name: "Pulumi", icon: "SiPulumi" },
+    { name: "CloudFormation", icon: "SiAmazonaws" },
+    { name: "Vagrant", icon: "SiVagrant" },
+    { name: "Chef", icon: "SiChef" },
+    { name: "Puppet", icon: "SiPuppet" },
+    
+    // CI/CD
     { name: "GitHub Actions", icon: "SiGithubactions" },
+    { name: "GitLab CI", icon: "SiGitlab" },
+    { name: "Jenkins", icon: "SiJenkins" },
+    { name: "CircleCI", icon: "SiCircleci" },
+    { name: "Travis CI", icon: "SiTravisci" },
+    { name: "TeamCity", icon: "SiTeamcity" },
+    { name: "Drone", icon: "SiDrone" },
+    
+    // Monitoring & Observability
     { name: "Prometheus", icon: "SiPrometheus" },
     { name: "Grafana", icon: "SiGrafana" },
+    { name: "Datadog", icon: "SiDatadog" },
+    { name: "New Relic", icon: "SiNewrelic" },
+    { name: "Jaeger", icon: "SiJaeger" },
+    { name: "Zipkin", icon: "SiZipkin" },
+    { name: "Sentry", icon: "SiSentry" },
+    
+    // Logging
+    { name: "Elasticsearch", icon: "SiElasticsearch" },
+    { name: "Logstash", icon: "SiLogstash" },
+    { name: "Kibana", icon: "SiKibana" },
+    { name: "Fluentd", icon: "SiFluentd" },
+    { name: "Loki", icon: "SiGrafana" },
+    { name: "Splunk", icon: "SiSplunk" },
+    
+    // Databases
+    { name: "PostgreSQL", icon: "SiPostgresql" },
+    { name: "MySQL", icon: "SiMysql" },
+    { name: "MongoDB", icon: "SiMongodb" },
+    { name: "Redis", icon: "SiRedis" },
+    { name: "Cassandra", icon: "SiApachecassandra" },
+    { name: "DynamoDB", icon: "SiAmazondynamodb" },
+    { name: "MariaDB", icon: "SiMariadb" },
+    
+    // Message Queues & Streaming
+    { name: "RabbitMQ", icon: "SiRabbitmq" },
+    { name: "Apache Kafka", icon: "SiApachekafka" },
+    { name: "NATS", icon: "SiNats" },
+    { name: "ActiveMQ", icon: "SiApache" },
+    { name: "Amazon SQS", icon: "SiAmazonaws" },
+    
+    // Web Servers & Reverse Proxies
+    { name: "Nginx", icon: "SiNginx" },
+    { name: "Apache", icon: "SiApache" },
+    { name: "HAProxy", icon: "SiHaproxy" },
+    { name: "Traefik", icon: "SiTraefik" },
+    { name: "Caddy", icon: "SiCaddy" },
+    { name: "Envoy", icon: "SiEnvoyproxy" },
+    
+    // Programming & Scripting
     { name: "Python", icon: "SiPython" },
     { name: "Bash", icon: "SiGnubash" },
     { name: "PowerShell", icon: "SiPowershell" },
-    { name: "PostgreSQL", icon: "SiPostgresql" },
-    { name: "MongoDB", icon: "SiMongodb" },
-    { name: "Redis", icon: "SiRedis" },
-    { name: "Nginx", icon: "SiNginx" },
-    { name: "Linux", icon: "SiLinux" },
+    { name: "Go", icon: "SiGo" },
+    { name: "Node.js", icon: "SiNodedotjs" },
+    { name: "TypeScript", icon: "SiTypescript" },
+    { name: "C#", icon: "SiCsharp" },
+    
+    // Version Control
     { name: "Git", icon: "SiGit" },
-    { name: "Azure", icon: "SiMicrosoftazure" },
-    { name: "ArgoCD", icon: "SiArgo" },
-    { name: "Elasticsearch", icon: "SiElasticsearch" },
+    { name: "GitHub", icon: "SiGithub" },
+    { name: "GitLab", icon: "SiGitlab" },
+    { name: "Bitbucket", icon: "SiBitbucket" },
+    
+    // Operating Systems
+    { name: "Linux", icon: "SiLinux" },
+    { name: "Ubuntu", icon: "SiUbuntu" },
+    { name: "CentOS", icon: "SiCentos" },
+    { name: "Debian", icon: "SiDebian" },
+    { name: "Red Hat", icon: "SiRedhat" },
+    { name: "Alpine Linux", icon: "SiAlpinelinux" },
+    { name: "Windows Server", icon: "SiWindows" },
+    
+    // Security & Secrets
+    { name: "HashiCorp Vault", icon: "SiVault" },
+    { name: "Trivy", icon: "SiTrivy" },
+    { name: "Snyk", icon: "SiSnyk" },
+    { name: "SonarQube", icon: "SiSonarqube" },
+    { name: "OWASP ZAP", icon: "SiOwasp" },
+    { name: "Aqua Security", icon: "SiAqua" },
+    
+    // Service Mesh
+    { name: "Istio", icon: "SiIstio" },
+    { name: "Linkerd", icon: "SiLinkerd" },
+    { name: "Consul", icon: "SiConsul" },
+    
+    // API & Integration
+    { name: "REST APIs", icon: "SiPostman" },
+    { name: "GraphQL", icon: "SiGraphql" },
+    { name: "gRPC", icon: "SiGrpc" },
+    { name: "Swagger", icon: "SiSwagger" },
+    { name: "Postman", icon: "SiPostman" },
+    
+    // Testing
+    { name: "Jest", icon: "SiJest" },
+    { name: "Pytest", icon: "SiPytest" },
+    { name: "Selenium", icon: "SiSelenium" },
+    { name: "Cypress", icon: "SiCypress" },
+    { name: "JUnit", icon: "SiJunit5" },
+    
+    // Build Tools
+    { name: "Maven", icon: "SiApachemaven" },
+    { name: "Gradle", icon: "SiGradle" },
+    { name: "npm", icon: "SiNpm" },
+    { name: "Yarn", icon: "SiYarn" },
+    { name: "Make", icon: "SiGnubash" },
+    
+    // Package Managers
+    { name: "Helm", icon: "SiHelm" },
+    { name: "apt", icon: "SiDebian" },
+    { name: "yum", icon: "SiRedhat" },
+    { name: "Chocolatey", icon: "SiChocolatey" },
+    { name: "Homebrew", icon: "SiHomebrew" },
+    
+    // Serverless
+    { name: "AWS Lambda", icon: "SiAwslambda" },
+    { name: "Azure Functions", icon: "SiMicrosoftazure" },
+    { name: "Google Cloud Functions", icon: "SiGooglecloud" },
+    { name: "Serverless Framework", icon: "SiServerless" },
+    
+    // Frameworks & Runtime
+    { name: "Flask", icon: "SiFlask" },
+    { name: "FastAPI", icon: "SiFastapi" },
+    { name: "Express.js", icon: "SiExpress" },
+    { name: ".NET", icon: "SiDotnet" },
+    { name: "Spring Boot", icon: "SiSpringboot" },
+    
+    // Virtualization
+    { name: "VMware", icon: "SiVmware" },
+    { name: "VirtualBox", icon: "SiVirtualbox" },
+    { name: "KVM", icon: "SiKubevirt" },
+    { name: "Hyper-V", icon: "SiMicrosoft" },
   ],
   projects: [
     {
