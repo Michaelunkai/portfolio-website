@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,7 +27,8 @@ export const metadata: Metadata = {
     "Prometheus",
     "Grafana",
     "Infrastructure Automation",
-    "Israel",
+    "Michael Fedorovsky",
+    "Israel DevOps",
   ],
   authors: [{ name: "Michael Fedorovsky" }],
   openGraph: {
@@ -35,12 +38,21 @@ export const metadata: Metadata = {
     url: "https://michaelunkai.github.io/portfolio-website",
     siteName: "Michael Fedorovsky Portfolio",
     type: "website",
+    images: [
+      {
+        url: "/images/avatar.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Michael Fedorovsky - DevOps Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Michael Fedorovsky | DevOps Engineer",
     description:
       "Results-driven DevOps Engineer with expertise in cloud infrastructure, CI/CD automation, and container orchestration.",
+    images: ["/images/avatar.jpg"],
   },
 };
 
@@ -50,9 +62,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        {children}
+        <ThemeProvider>
+          {children}
+          <ScrollToTop />
+        </ThemeProvider>
       </body>
     </html>
   );

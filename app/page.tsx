@@ -13,10 +13,14 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <HeroSection />
+        <section id="home">
+          <HeroSection />
+        </section>
         <FocusSection />
         <FeaturedProject />
-        <ProjectsSection />
+        <section id="projects">
+          <ProjectsSection />
+        </section>
         <TemplatesSection />
         <AboutSection />
         <TeamSection />
