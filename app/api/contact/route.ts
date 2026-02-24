@@ -86,9 +86,6 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
     });
 
-    // Recipients: both Michael's email addresses
-    const recipients = ["michaelovsky5@gmail.com", "michaelovsky55@gmail.com"];
-
     // Send email using Resend if API key is configured
     if (process.env.RESEND_API_KEY) {
       const emailContent = `
@@ -104,36 +101,57 @@ ${body.details}
 
 ---
 Submitted at: ${new Date().toISOString()}
+
+Note: Reply to this email will go to ${body.email}
       `.trim();
 
-      const response = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        },
-        body: JSON.stringify({
-          from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
-          to: recipients,
-          subject: `Portfolio Contact: ${body.projectType} - ${body.name}`,
-          text: emailContent,
-          reply_to: body.email,
-        }),
-      });
+      try {
+        const response = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+          },
+          body: JSON.stringify({
+            from: "onboarding@resend.dev",
+            to: "michaelovsky5@gmail.com",
+            subject: `Portfolio Contact: ${body.projectType} - ${body.name}`,
+            text: emailContent,
+            reply_to: body.email,
+          }),
+        });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error("Resend API error:", errorData);
-        // Still return success to user but log the error
-      } else {
-        console.log("Email sent successfully to:", recipients.join(", "));
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error("Resend API error:", errorData);
+          return NextResponse.json(
+            { error: `Email sending failed: ${errorData.message || "Unknown error"}` },
+            { status: 500 }
+          );
+        }
+
+        const result = await response.json();
+        console.log("Email sent successfully:", result);
+        console.log("Sent to: michaelovsky5@gmail.com");
+        
+        return NextResponse.json({ 
+          success: true,
+          message: "Email sent successfully to michaelovsky5@gmail.com"
+        });
+      } catch (emailError) {
+        console.error("Email sending error:", emailError);
+        return NextResponse.json(
+          { error: "Failed to send email. Please try again." },
+          { status: 500 }
+        );
       }
     } else {
-      console.log("Email would be sent to:", recipients.join(", "));
-      console.log("Configure RESEND_API_KEY in .env.local to enable email sending");
+      console.log("RESEND_API_KEY not configured - email not sent");
+      return NextResponse.json(
+        { error: "Email service not configured" },
+        { status: 500 }
+      );
     }
-
-    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);
     return NextResponse.json(
