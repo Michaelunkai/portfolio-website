@@ -2,68 +2,75 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Sparkles, ArrowRight, MessageSquare } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import StatCard from "@/components/ui/StatCard";
+import { useEffect, useState } from "react";
 
 export default function ServicesHero() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         {/* Pill Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-purple/10 border border-accent-purple/20 mb-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/40 mb-8"
         >
-          <Sparkles className="w-4 h-4 text-accent-purple" />
-          <span className="text-sm text-accent-purpleLight">
-            Professional Development Services
+          <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          <span className="text-sm text-cyan-400 font-medium">
+            Professional DevOps Services
           </span>
         </motion.div>
 
         {/* Heading */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: 0.1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0 }}
+          transition={{ duration: 0.3, delay: 0.05 }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"
         >
-          Turning Your Ideas{" "}
-          <span className="bg-gradient-to-r from-accent-purple to-accent-purpleLight bg-clip-text text-transparent">
-            Into Reality
+          Infrastructure That{" "}
+          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Never Fails
           </span>
         </motion.h1>
 
         {/* Subheading */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
           className="text-gray-400 text-lg max-w-2xl mx-auto mb-10"
         >
-          From concept to deployment, I provide end-to-end development services
-          tailored to your needs. Let&apos;s build something amazing together.
+          From architecture design to production deployment, I build and automate
+          the backbone of your operations with reliability, security, and scalability.
         </motion.p>
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: 0.3 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
           <Link
             href="#services"
-            className="w-full sm:w-auto px-8 py-4 bg-accent-purple text-white rounded-xl font-medium hover:bg-accent-purpleLight transition-colors flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-medium hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all flex items-center justify-center gap-2 group"
           >
             View Services
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
             href="#contact"
-            className="w-full sm:w-auto px-8 py-4 border border-white/10 text-white rounded-xl font-medium hover:bg-white/5 transition-colors flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-medium hover:bg-cyan-500/10 transition-colors flex items-center justify-center gap-2"
           >
             <MessageSquare className="w-4 h-4" />
             Get in Touch
@@ -72,9 +79,9 @@ export default function ServicesHero() {
 
         {/* Stats Bar */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           {portfolio.stats.map((stat, index) => (
