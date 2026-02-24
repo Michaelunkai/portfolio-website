@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Log the contact form submission (in production, you would send an email)
+    // Log the contact form submission
     console.log("Contact form submission:", {
       name: body.name,
       email: body.email,
@@ -86,22 +86,52 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
     });
 
-    // In production, you would integrate with:
-    // - Nodemailer (SMTP)
-    // - Resend API
-    // - SendGrid
-    // - Or any other email service
+    // Recipients: both Michael's email addresses
+    const recipients = ["michaelovsky5@gmail.com", "michaelovsky55@gmail.com"];
 
-    // Example with Resend (uncomment and configure):
-    // if (process.env.RESEND_API_KEY) {
-    //   const resend = new Resend(process.env.RESEND_API_KEY);
-    //   await resend.emails.send({
-    //     from: 'contact@yourdomain.com',
-    //     to: process.env.CONTACT_EMAIL,
-    //     subject: `New Contact: ${body.projectType}`,
-    //     text: `Name: ${body.name}\nEmail: ${body.email}\nType: ${body.projectType}\n\n${body.details}`,
-    //   });
-    // }
+    // Send email using Resend if API key is configured
+    if (process.env.RESEND_API_KEY) {
+      const emailContent = `
+New Contact Form Submission
+===========================
+
+Name: ${body.name}
+Email: ${body.email}
+Project Type: ${body.projectType}
+
+Details:
+${body.details}
+
+---
+Submitted at: ${new Date().toISOString()}
+      `.trim();
+
+      const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        },
+        body: JSON.stringify({
+          from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+          to: recipients,
+          subject: `Portfolio Contact: ${body.projectType} - ${body.name}`,
+          text: emailContent,
+          reply_to: body.email,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Resend API error:", errorData);
+        // Still return success to user but log the error
+      } else {
+        console.log("Email sent successfully to:", recipients.join(", "));
+      }
+    } else {
+      console.log("Email would be sent to:", recipients.join(", "));
+      console.log("Configure RESEND_API_KEY in .env.local to enable email sending");
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

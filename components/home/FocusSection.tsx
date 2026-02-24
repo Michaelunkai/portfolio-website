@@ -1,29 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Palette, Zap } from "lucide-react";
+import { Cloud, Container, Activity, Shield } from "lucide-react";
 import { fadeUp, fadeUpProps, staggerContainer, staggerChild, staggerChildTransition } from "@/lib/animations";
 import { portfolio } from "@/data/portfolio";
 import TechBadge from "@/components/ui/TechBadge";
 
 const focusAreas = [
   {
-    icon: Code2,
-    title: "Web Development",
+    icon: Cloud,
+    title: "Cloud Infrastructure",
     description:
-      "Building fast, scalable web applications with modern frameworks like Next.js, React, and Node.js.",
+      "Architecting scalable cloud solutions on AWS, Azure, and GCP. Expertise in VPC design, auto-scaling, and cost optimization.",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
+    icon: Container,
+    title: "Container Orchestration",
     description:
-      "Creating intuitive and beautiful user interfaces that provide exceptional user experiences.",
+      "Docker containerization and Kubernetes deployments. Helm charts, ArgoCD GitOps, and microservices architecture.",
   },
   {
-    icon: Zap,
-    title: "AI Integration",
+    icon: Activity,
+    title: "CI/CD & Automation",
     description:
-      "Integrating AI capabilities into applications to automate tasks and enhance functionality.",
+      "Building robust pipelines with GitHub Actions, Jenkins, and GitLab CI. Infrastructure as Code with Terraform and Ansible.",
+  },
+  {
+    icon: Shield,
+    title: "Monitoring & Security",
+    description:
+      "Full observability stacks with Prometheus, Grafana, and ELK. Security scanning, vulnerability management, and compliance.",
   },
 ];
 
@@ -34,11 +40,11 @@ export default function FocusSection() {
         {/* Section Title */}
         <motion.div variants={fadeUp} {...fadeUpProps} className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            What I Focus On
+            What I Do
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Specializing in modern web technologies and AI to deliver
-            cutting-edge solutions.
+            Specializing in modern DevOps practices and infrastructure automation
+            to help organizations scale efficiently and reliably.
           </p>
         </motion.div>
 
@@ -48,7 +54,7 @@ export default function FocusSection() {
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {focusAreas.map((area, index) => (
             <motion.div
@@ -61,7 +67,7 @@ export default function FocusSection() {
               <h3 className="text-xl font-semibold text-white mb-2">
                 {area.title}
               </h3>
-              <p className="text-gray-400">{area.description}</p>
+              <p className="text-gray-400 text-sm">{area.description}</p>
             </motion.div>
           ))}
         </motion.div>

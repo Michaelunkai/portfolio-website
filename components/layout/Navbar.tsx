@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Sparkles, Menu, X } from "lucide-react";
+import { Terminal, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolio } from "@/data/portfolio";
 
@@ -31,11 +31,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <Sparkles className="w-6 h-6 text-accent-purple group-hover:text-accent-purpleLight transition-colors" />
+            <Terminal className="w-6 h-6 text-accent-purple group-hover:text-accent-purpleLight transition-colors" />
             <span className="font-bold text-white">{portfolio.personal.brand}</span>
-            <span className="text-xs text-gray-500">
-              by, {portfolio.personal.name.split(" ")[0]}
-            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -59,10 +56,10 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="/services"
-              className="px-4 py-2 border border-accent-purple text-accent-purple rounded-lg text-sm font-medium hover:bg-accent-purple hover:text-white transition-all"
+              href="/services#contact"
+              className="px-4 py-2 bg-accent-purple text-white rounded-lg text-sm font-medium hover:bg-accent-purpleLight transition-all"
             >
-              Join the Team
+              Hire Me
             </Link>
           </div>
 
@@ -84,7 +81,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="md:hidden border-t border-white/[0.06] bg-[#0a0b14]/95 backdrop-blur-md"
           >
             <div className="px-4 py-4 space-y-2">
@@ -102,10 +99,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/services"
-                className="block mt-4 px-4 py-3 border border-accent-purple text-accent-purple rounded-lg text-sm font-medium text-center hover:bg-accent-purple hover:text-white transition-all"
+                href="/services#contact"
+                className="block mt-4 px-4 py-3 bg-accent-purple text-white rounded-lg text-sm font-medium text-center hover:bg-accent-purpleLight transition-all"
               >
-                Join the Team
+                Hire Me
               </Link>
             </div>
           </motion.div>

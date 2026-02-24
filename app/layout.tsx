@@ -8,22 +8,39 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Till Thelet | Full-Stack Developer & AI Specialist",
+  title: "Michael Fedorovsky | DevOps Engineer & System Administrator",
   description:
-    "I craft modern web applications with cutting-edge technologies. Specializing in React, Next.js, and AI integration to deliver exceptional user experiences.",
+    "Results-driven DevOps Engineer with expertise in cloud infrastructure, CI/CD automation, container orchestration, and monitoring systems. 50+ automation tools built. Expert in AWS, Docker, Kubernetes, Prometheus/Grafana, and Python/Bash scripting.",
+  keywords: [
+    "DevOps Engineer",
+    "System Administrator",
+    "Cloud Engineer",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "GitHub Actions",
+    "Terraform",
+    "Ansible",
+    "Prometheus",
+    "Grafana",
+    "Infrastructure Automation",
+    "Israel",
+  ],
+  authors: [{ name: "Michael Fedorovsky" }],
   openGraph: {
-    title: "Till Thelet | Portfolio",
+    title: "Michael Fedorovsky | DevOps Engineer",
     description:
-      "I craft modern web applications with cutting-edge technologies. Specializing in React, Next.js, and AI integration.",
-    url: "https://tilldev.com",
-    siteName: "TillDev",
+      "Results-driven DevOps Engineer with expertise in cloud infrastructure, CI/CD automation, and container orchestration. 50+ automation tools built.",
+    url: "https://michaelunkai.github.io/portfolio-website",
+    siteName: "Michael Fedorovsky Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Till Thelet",
+    title: "Michael Fedorovsky | DevOps Engineer",
     description:
-      "I craft modern web applications with cutting-edge technologies. Specializing in React, Next.js, and AI integration.",
+      "Results-driven DevOps Engineer with expertise in cloud infrastructure, CI/CD automation, and container orchestration.",
   },
 };
 

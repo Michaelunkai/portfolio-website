@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
 export default function Footer() {
@@ -13,18 +13,18 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <div className="text-gray-500 text-sm">
-            © {currentYear} {portfolio.personal.brand}. All rights reserved.
+            © {currentYear} {portfolio.personal.name}. All rights reserved.
           </div>
 
           {/* GitHub Link */}
           <Link
-            href={portfolio.socials.github}
+            href="https://github.com/Michaelunkai/portfolio-website"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2"
           >
             <Github className="w-4 h-4" />
-            View on GitHub
+            View Source Code
           </Link>
 
           {/* Social Links */}
@@ -39,15 +39,6 @@ export default function Footer() {
               <Github className="w-5 h-5" />
             </Link>
             <Link
-              href={portfolio.socials.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-accent-purple transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5" />
-            </Link>
-            <Link
               href={portfolio.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -55,15 +46,6 @@ export default function Footer() {
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
-            </Link>
-            <Link
-              href={portfolio.socials.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-accent-purple transition-colors"
-              aria-label="YouTube"
-            >
-              <Youtube className="w-5 h-5" />
             </Link>
           </div>
         </div>

@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Wrench, Code2, Database, Check, Star } from "lucide-react";
+import { MessageSquare, Rocket, Activity, Server, Check, Star } from "lucide-react";
 import { fadeUp, fadeUpProps } from "@/lib/animations";
 import { portfolio } from "@/data/portfolio";
 import type { Service } from "@/data/portfolio";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Wrench,
-  Code2,
-  Database,
+  MessageSquare,
+  Rocket,
+  Activity,
+  Server,
 };
 
 const colorMap: Record<string, { text: string; bg: string; border: string }> = {
@@ -28,6 +29,11 @@ const colorMap: Record<string, { text: string; bg: string; border: string }> = {
     bg: "bg-accent-green",
     border: "border-accent-green/30",
   },
+  orange: {
+    text: "text-orange-500",
+    bg: "bg-orange-500",
+    border: "border-orange-500/30",
+  },
 };
 
 function ServiceCard({
@@ -37,7 +43,7 @@ function ServiceCard({
   service: Service;
   index: number;
 }) {
-  const Icon = iconMap[service.icon] || Code2;
+  const Icon = iconMap[service.icon] || MessageSquare;
   const colors = colorMap[service.accentColor] || colorMap.purple;
 
   return (
@@ -79,7 +85,7 @@ function ServiceCard({
       <ul className="space-y-2 mb-6">
         {service.features.map((feature) => (
           <li key={feature} className="flex items-center gap-2 text-sm">
-            <Check className={`w-4 h-4 ${colors.text}`} />
+            <Check className={`w-4 h-4 ${colors.text} flex-shrink-0`} />
             <span className="text-gray-300">{feature}</span>
           </li>
         ))}
@@ -112,12 +118,12 @@ export default function PricingSection() {
             Services & Pricing
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Choose the service that fits your needs. All packages include
-            dedicated support and regular updates.
+            Professional DevOps and infrastructure services tailored to your needs.
+            All packages include dedicated support and comprehensive documentation.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {portfolio.services.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
