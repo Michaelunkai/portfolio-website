@@ -311,6 +311,51 @@ I thrive on solving complex infrastructure challenges, optimizing costs, and bui
       },
       featured: false,
     },
+    {
+      id: "project-18",
+      name: "UninstallPro",
+      tagline: "Advanced Windows Application Uninstaller",
+      description:
+        "Powerful Windows application uninstaller with deep registry cleaning, leftover file detection, forced uninstall capabilities, and bulk removal features. Provides a cleaner alternative to Windows' built-in Programs and Features with comprehensive app management.",
+      image: "/images/projects/uninstallpro.svg",
+      tech: ["C#", ".NET", "WinForms", "Registry API"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/uninstallpro",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-19",
+      name: "Game Launcher Pro",
+      tagline: "Unified Gaming Library Manager",
+      description:
+        "Professional game library manager that consolidates games from multiple platforms. Features automatic game detection, custom categories, favorites, playtime tracking, and a beautiful modern interface for managing your entire gaming collection in one place.",
+      image: "/images/projects/game-launcher.svg",
+      tech: ["C#", ".NET", "WPF", "SQLite"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/game-launcher-pro",
+        app: null,
+      },
+      featured: false,
+    },
+    {
+      id: "project-20",
+      name: "QuadDown",
+      tagline: "Multi-Protocol Download Manager",
+      description:
+        "High-performance download manager supporting HTTP, HTTPS, FTP, and torrents. Features parallel downloading, resume capability, bandwidth control, queue management, and browser integration for seamless downloading experiences.",
+      image: "/images/projects/quaddown.svg",
+      tech: ["Python", "Qt", "libtorrent", "asyncio"],
+      links: {
+        website: null,
+        source: "https://github.com/Michaelunkai/QuadDown",
+        app: null,
+      },
+      featured: false,
+    },
   ],
   templates: [
     {

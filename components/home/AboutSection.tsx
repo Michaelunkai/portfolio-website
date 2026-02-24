@@ -66,9 +66,23 @@ export default function AboutSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             About Me
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Results-driven DevOps Engineer specializing in cloud infrastructure automation,
-            CI/CD pipelines, and production-grade monitoring systems.
+          <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed mb-6">
+            I'm a <span className="text-cyan-400 font-semibold">DevOps Engineer</span> with 3+ years of hands-on experience building and maintaining production infrastructure that powers real businesses. My journey started with a deep fascination for system automation and grew into a comprehensive skill set spanning <span className="text-cyan-400">cloud architecture, container orchestration, CI/CD pipelines, and security automation</span>.
+          </p>
+          <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed mb-6">
+            At <span className="text-white font-medium">TovTech</span>, I designed and deployed multi-environment cloud infrastructure on AWS and Webdock with Cloudflare CDN integration, achieving <span className="text-green-400 font-semibold">99.9% uptime</span> and <span className="text-green-400 font-semibold">60% faster deployment times</span>. I built comprehensive CI/CD pipelines with GitHub Actions, automated testing workflows, Docker multi-stage builds, and zero-downtime deployments. My monitoring stack (Prometheus + Grafana + ELK) provides real-time visibility into system health, application performance, and security events.
+          </p>
+          <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed mb-6">
+            I've developed <span className="text-cyan-400 font-semibold">50+ production-grade automation tools</span> ranging from container security scanners (Trivy integration) to API gateways with rate limiting and caching. My expertise spans <span className="text-white">Python, Bash, PowerShell scripting</span> for system administration, <span className="text-white">Infrastructure as Code (Terraform/Ansible)</span>, <span className="text-white">Kubernetes orchestration with Helm and ArgoCD</span>, and <span className="text-white">database management (PostgreSQL, MongoDB, Redis)</span> with replication and automated backups.
+          </p>
+          <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed mb-6">
+            Security is at the core of everything I build. I implement <span className="text-red-400">OWASP best practices</span>, conduct vulnerability scanning with Trivy, manage secrets with HashiCorp Vault, enforce compliance (GDPR, SOC2), and perform regular security audits. My infrastructure follows the principle of least privilege, automated certificate management (Let's Encrypt), firewall hardening (ufw/iptables), and comprehensive logging for incident response.
+          </p>
+          <p className="text-gray-400 max-w-4xl mx-auto leading-relaxed mb-6">
+            Beyond technical skills, I excel at <span className="text-purple-400">cost optimization</span>—reducing cloud bills by 30-60% through right-sizing, reserved/spot instances, and idle resource detection. I've built <span className="text-blue-400">web scraping pipelines</span> with Puppeteer/Playwright, <span className="text-yellow-400">AI chatbots</span> with OpenAI/Claude integration, and <span className="text-pink-400">real-time monitoring dashboards</span> with WebSocket updates. My work combines DevOps best practices with modern development techniques to deliver scalable, maintainable, and cost-effective solutions.
+          </p>
+          <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed text-lg">
+            I'm passionate about <span className="text-cyan-400 font-semibold">solving complex infrastructure challenges</span>, automating repetitive tasks, and empowering development teams with robust, reliable systems. Whether you need cloud migration, CI/CD implementation, Kubernetes orchestration, or security hardening—I deliver production-ready solutions that scale with your business.
           </p>
         </motion.div>
 

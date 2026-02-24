@@ -1,15 +1,10 @@
-﻿<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+﻿<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gitit" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    <linearGradient id="grad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.6" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="#0a0b14"/>
-  <rect x="50" y="50" width="700" height="350" fill="url(#gitit)" opacity="0.15" rx="20"/>
-  <rect x="100" y="140" width="600" height="30" fill="url(#gitit)" opacity="0.4" rx="5"/>
-  <rect x="100" y="190" width="500" height="30" fill="url(#gitit)" opacity="0.4" rx="5"/>
-  <rect x="100" y="240" width="550" height="30" fill="url(#gitit)" opacity="0.4" rx="5"/>
-  <text x="400" y="320" text-anchor="middle" fill="#3b82f6" font-family="monospace" font-size="36" font-weight="bold">GITIT</text>
-  <text x="400" y="355" text-anchor="middle" fill="#6b7280" font-family="sans-serif" font-size="14">Python • CLI • Git Automation</text>
+  <rect width="600" height="400" fill="url(#grad9)"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="32" font-family="Arial, sans-serif" font-weight="bold">GITIT</text>
 </svg>

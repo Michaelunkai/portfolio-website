@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud, Container, Activity, Shield } from "lucide-react";
+import { Cloud, Container, Activity, Shield, Database, Code2, GitBranch, Server, Network, Lock, Zap, FileText, HardDrive, DollarSign, Globe, Cpu } from "lucide-react";
 import { fadeUpFast } from "@/lib/animations";
 import { portfolio } from "@/data/portfolio";
 import TechBadge from "@/components/ui/TechBadge";
@@ -34,6 +34,90 @@ const focusAreas = [
     description:
       "Full observability stacks with Prometheus, Grafana, and ELK. Container scanning with Trivy, vulnerability management, compliance automation, and incident response.",
     color: "from-orange-500 to-red-500",
+  },
+  {
+    icon: Database,
+    title: "Database Management",
+    description:
+      "PostgreSQL, MySQL, MongoDB, Redis optimization. Query tuning, indexing strategies, replication, sharding, connection pooling, and automated backup solutions.",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    icon: Code2,
+    title: "Scripting & Automation",
+    description:
+      "Python, Bash, PowerShell automation scripts. System administration, data processing, ETL pipelines, API integrations, and scheduled task automation.",
+    color: "from-violet-500 to-purple-500",
+  },
+  {
+    icon: GitBranch,
+    title: "Version Control & GitOps",
+    description:
+      "Git workflows, branching strategies, ArgoCD, FluxCD. GitOps principles, automated deployments, rollback strategies, and collaborative development practices.",
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    icon: Server,
+    title: "Linux System Administration",
+    description:
+      "Ubuntu, Debian, CentOS, RHEL administration. Security hardening, performance tuning, systemd services, kernel optimization, and production server management.",
+    color: "from-amber-500 to-orange-500",
+  },
+  {
+    icon: Network,
+    title: "Networking & Load Balancing",
+    description:
+      "Nginx, HAProxy, Traefik configuration. DNS management, SSL/TLS certificates, reverse proxies, CDN integration (Cloudflare), and traffic distribution.",
+    color: "from-teal-500 to-cyan-500",
+  },
+  {
+    icon: Lock,
+    title: "Security & Compliance",
+    description:
+      "OWASP security best practices, penetration testing, vulnerability scanning. GDPR, SOC2 compliance, secrets management (Vault), and security audits.",
+    color: "from-red-500 to-rose-500",
+  },
+  {
+    icon: Zap,
+    title: "API Development",
+    description:
+      "RESTful APIs with Node.js, Python Flask, .NET. JWT authentication, rate limiting, API documentation (Swagger/OpenAPI), versioning, and comprehensive testing.",
+    color: "from-yellow-500 to-amber-500",
+  },
+  {
+    icon: FileText,
+    title: "Log Aggregation",
+    description:
+      "ELK Stack (Elasticsearch, Logstash, Kibana), Grafana Loki. Centralized logging, log parsing, structured logging, custom dashboards, and alerting.",
+    color: "from-indigo-500 to-blue-500",
+  },
+  {
+    icon: HardDrive,
+    title: "Backup & Disaster Recovery",
+    description:
+      "Automated backup strategies, geo-redundancy, RPO/RTO planning. Backup testing, validation, restoration procedures, and business continuity planning.",
+    color: "from-slate-500 to-gray-500",
+  },
+  {
+    icon: DollarSign,
+    title: "Cost Optimization",
+    description:
+      "Cloud cost analysis, right-sizing, reserved/spot instances. Idle resource detection, budget alerts, cost allocation tagging, and 30-60% cost reduction strategies.",
+    color: "from-green-500 to-teal-500",
+  },
+  {
+    icon: Globe,
+    title: "Web Scraping & Data Extraction",
+    description:
+      "Puppeteer, Playwright, Scrapy development. Anti-bot bypass, headless browser automation, proxy rotation, data pipelines, and storage integration.",
+    color: "from-blue-500 to-indigo-500",
+  },
+  {
+    icon: Cpu,
+    title: "Performance Optimization",
+    description:
+      "Application profiling, bottleneck identification, caching strategies (Redis, Memcached). Query optimization, CDN integration, and scalability improvements.",
+    color: "from-purple-500 to-pink-500",
   },
 ];
 

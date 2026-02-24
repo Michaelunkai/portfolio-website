@@ -1,13 +1,10 @@
-﻿<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+﻿<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="security" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:0.6" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="#0a0b14"/>
-  <rect x="50" y="50" width="700" height="350" fill="url(#security)" opacity="0.15" rx="20"/>
-  <path d="M 400 180 L 360 220 L 380 260 L 420 260 L 440 220 Z" fill="url(#security)" opacity="0.5"/>
-  <text x="400" y="300" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="40" font-weight="bold">SECURE</text>
-  <text x="400" y="330" text-anchor="middle" fill="#6b7280" font-family="sans-serif" font-size="14">Trivy • CVE Detection • CVSS</text>
+  <rect width="600" height="400" fill="url(#grad2)"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="32" font-family="Arial, sans-serif" font-weight="bold">SECURITY-SCANNER</text>
 </svg>
