@@ -87,7 +87,7 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => ({}));
 
       if (response.ok) {
         setStatus("success");
@@ -102,6 +102,15 @@ export default function ContactForm() {
           details: "",
           consent: false,
         });
+      } else if (response.status === 404 || response.status === 405) {
+        // Static hosting (GitHub Pages) has no API route — open the visitor's mail client instead.
+        const subject = encodeURIComponent(`Portfolio Contact: ${formData.projectType} - ${formData.name}`);
+        const bodyText = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nProject Type: ${formData.projectType}\nBudget: ${formData.budget}\nTimeline: ${formData.timeline}\n\n${formData.details}`
+        );
+        window.location.href = `mailto:michaelovsky5@gmail.com?subject=${subject}&body=${bodyText}`;
+        setStatus("success");
+        setMessage("Opening your email app so you can send the message directly.");
       } else {
         setStatus("error");
         setMessage(data.error || "Failed to send message. Please try again.");
