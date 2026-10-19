@@ -124,32 +124,63 @@ Note: Reply to this email will go to ${body.email}
         if (!response.ok) {
           const errorData = await response.json();
           console.error("Resend API error:", errorData);
-          return NextResponse.json(
-            { error: `Email sending failed: ${errorData.message || "Unknown error"}` },
-            { status: 500 }
-          );
-        }
+          // Fall through to the keyless FormSubmit fallback below.
+        } else {
+          const result = await response.json();
+          console.log("Email sent successfully:", result);
+          console.log("Sent to: michaelovsky5@gmail.com");
 
-        const result = await response.json();
-        console.log("Email sent successfully:", result);
-        console.log("Sent to: michaelovsky5@gmail.com");
-        
-        return NextResponse.json({ 
-          success: true,
-          message: "Email sent successfully to michaelovsky5@gmail.com"
-        });
+          return NextResponse.json({
+            success: true,
+            message: "Email sent successfully to michaelovsky5@gmail.com"
+          });
+        }
       } catch (emailError) {
         console.error("Email sending error:", emailError);
-        return NextResponse.json(
-          { error: "Failed to send email. Please try again." },
-          { status: 500 }
-        );
+        // Fall through to the keyless FormSubmit fallback below.
       }
-    } else {
-      console.log("RESEND_API_KEY not configured - email not sent");
+    }
+
+    // Keyless fallback: FormSubmit delivers to the inbox after a one-time activation email.
+    try {
+      const siteOrigin = new URL(request.url).origin;
+      const fsResponse = await fetch("https://formsubmit.co/ajax/michaelovsky5@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Origin: siteOrigin,
+          Referer: `${siteOrigin}/`,
+        },
+        body: JSON.stringify({
+          _subject: `Portfolio Contact: ${body.projectType} - ${body.name}`,
+          _replyto: body.email,
+          Name: body.name,
+          Email: body.email,
+          Phone: body.phone || "-",
+          "Project Type": body.projectType,
+          Budget: body.budget || "-",
+          Timeline: body.timeline || "-",
+          Details: body.details,
+        }),
+      });
+
+      if (fsResponse.ok) {
+        return NextResponse.json({
+          success: true,
+          message: "Message sent successfully to michaelovsky5@gmail.com",
+        });
+      }
+      // Email gateway unreachable from the server — signal the client to fall back to mailto.
       return NextResponse.json(
-        { error: "Email service not configured" },
-        { status: 500 }
+        { error: "Email gateway unavailable" },
+        { status: 405 }
+      );
+    } catch (fsError) {
+      console.error("FormSubmit sending error:", fsError);
+      return NextResponse.json(
+        { error: "Email gateway unavailable" },
+        { status: 405 }
       );
     }
   } catch (error) {
